@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Friend Website</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('Nikhitha.jpeg') no-repeat center center/cover;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
+            animation: bounceIn 1.5s ease-in-out;
+        }
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            animation: fadeIn 2s ease-in-out, colorChange 3s infinite;
+        }
+        .description, .qualities {
+            font-size: 1.2rem;
+            margin: 10px 0;
+            animation: slideIn 1.5s ease-in-out;
+        }
+        .image-container img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 4px solid white;
+            margin: 10px 0;
+            animation: zoomIn 1.5s ease-in-out;
+        }
+        .surprise-box {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: white;
+            color: #ff758c;
+            font-size: 1.5rem;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: shake 1s infinite;
+        }
+        .surprise-box:hover {
+            background: #ff5733;
+            color: white;
+        }
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            color: #333;
+            font-size: 1.2rem;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+        }
+        @keyframes bounceIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        @keyframes colorChange {
+            0% { color: white; }
+            50% { color: lightblue; }
+            100% { color: white; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">🌸 Nikhitha Duriseti 🌸</h1>
+        <p class="description">"A beautiful soul with a heart full of kindness and a mind full of brilliance!"</p>
+        <div class="image-container">
+            <img src="Nikhitha.jpeg" alt="Best Friend">
+        </div>
+        <p class="qualities">💖 Smart | Beautiful | Kind | Talented 💖</p>
+        
+        <div class="surprise-box" onclick="showSurprise()">Click for a Surprise! 🎁</div>
+        
+        <div class="hidden-message" id="surprise-message">
+            <h2>Surprise, Nikhitha! 🎉</h2>
+            <p>You are an amazing person with a heart full of love and kindness. Your smile can brighten anyone's day, and your intelligence is truly inspiring. 🌟</p>
+            <p>Your energy is like WiFi – always connecting people and making everyone happy! 😂</p>
+            <p>If laughter was a currency, you'd be the richest person ever! 💰🤣</p>
+            <p>You're so awesome, even mirrors look at you and say, "Wow!" 😆</p>
+            <p>The only thing brighter than your future is your smile! 😍</p>
+            <p>Stay awesome, because the world needs more people like YOU! 🌍✨</p>
+        </div>
+    </div>
+    <script>
+        function showSurprise() {
+            document.getElementById("surprise-message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
